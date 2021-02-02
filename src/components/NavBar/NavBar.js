@@ -1,7 +1,31 @@
 import React, { Component } from "react";
+import "./NavBar.css";
 import { MenuItems } from "./MenuItems";
+import { Cart } from "../cart/Cart";
 
-function NavBar(params) {
+const NavBar = () => {
+  return (
+    <nav className="NavBarItems">
+      <h1 className="navbar-logo">Bootlegger</h1>
+
+      <ul>
+        {MenuItems.map((item, index) => {
+          return (
+            <li key={index}>
+              <a className={item.cName} href={item.url}>
+                {item.title}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
+
+export default NavBar;
+
+/* function NavBar(params) {
   return (
     <nav className="NavBarItems">
       <h1 className="navbar-logo">Bootlegger </h1>
@@ -20,9 +44,7 @@ function NavBar(params) {
       </ul>
     </nav>
   );
-}
-
-export default NavBar;
+} */
 
 /* class NavBar extends Component {
   render() {

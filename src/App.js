@@ -1,14 +1,23 @@
 import "./App.css";
 import { Component } from "react";
+import "./assets/tailwind.css";
 /* import logo from "./logo.svg"; */
-import NavBar from "./components/navBar/NavBar";
-import "./components/navBar/NavBar.css";
+import ItemsContainer from "./containers/itemsContainer/ItemsContainer";
+import Header from "./components/header/Header";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <>
+      <header className="container py-8 px-10 flex justify-between full-width">
+        <Header />
+      </header>
+
+      <div className="container py-8 px-10 flex justify-center full-width">
+        <ItemsContainer greeting="Bienvenidos" />
+      </div>
+
+      <footer></footer>
+    </>
   );
 }
 
