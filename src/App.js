@@ -8,13 +8,13 @@ import Header from "./components/header/Header";
 function App() {
   return (
     <>
-      <header className="container py-8 px-10 flex justify-between full-width">
+      <header className="container py-8 px-10 flex justify-between mx-auto full-width">
         <Header />
       </header>
 
-      <div className="container py-8 px-10 flex justify-center full-width">
+      <section className="container py-8 px-10 flex flex-col justify-center mx-auto full-width">
         <ItemsContainer greeting="Bienvenidos" />
-      </div>
+      </section>
 
       <footer></footer>
     </>
