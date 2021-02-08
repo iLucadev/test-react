@@ -4,9 +4,11 @@ import Cart from "../cart/Cart";
 const Header = (props) => {
   return (
     <>
-      <h1 className="text-lg text-black font-semibold">Bootlegger</h1>
+      <header className="container col-span-6 flex items-center py-4 px-6 flex justify-between mx-auto full-width">
+        <h1 className="text-lg text-black font-semibold">Ebenezer</h1>
 
-      <Cart />
+        <Cart />
+      </header>
     </>
   );
 };

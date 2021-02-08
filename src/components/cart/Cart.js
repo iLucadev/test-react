@@ -9,7 +9,7 @@ const Cart = () => {
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        height="32px"
+        height="28px"
       >
         <path
           strokeLinecap="round"

@@ -11,14 +11,14 @@ const ItemCount = ({ stock, onAdd, onSubstract, contador }) => {
           {contador > 0 ? (
             <button
               onClick={onSubstract}
-              className="substract flex justify-center items-center font-black text-2xl"
+              className="substract col-start-1 flex justify-center items-center font-black text-2xl"
               type=""
             >
               −
             </button>
           ) : null}
 
-          <b className="contador flex justify-center items-center">
+          <b className="contador col-start-2 flex justify-center items-center">
             {contador}
           </b>
 
@@ -27,7 +27,7 @@ const ItemCount = ({ stock, onAdd, onSubstract, contador }) => {
               onClick={() => {
                 onAdd(stock);
               }}
-              className="addition flex justify-center items-center font-black text-2xl"
+              className="addition col-start-3 flex justify-center items-center font-black text-2xl"
               type=""
             >
               +

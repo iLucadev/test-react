@@ -4,20 +4,17 @@ import "./assets/tailwind.css";
 /* import logo from "./logo.svg"; */
 import ItemsContainer from "./containers/itemsContainer/ItemsContainer";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <>
-      <header className="container py-8 px-10 flex justify-between mx-auto full-width">
-        <Header />
-      </header>
+    <div className="container min-h-screen grid grid-cols-3 grid-flow-row auto-rows-min content-between mx-auto full-width">
+      <Header />
 
-      <section className="container py-8 px-10 flex flex-col justify-center mx-auto full-width">
-        <ItemsContainer greeting="Bienvenidos" />
-      </section>
+      <ItemsContainer greeting="Bienvenidos" />
 
-      <footer></footer>
-    </>
+      <Footer />
+    </div>
   );
 }
 
