@@ -1,20 +1,25 @@
 import "./App.css";
 import { Component } from "react";
 import "./assets/tailwind.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 /* import logo from "./logo.svg"; */
-import ItemsContainer from "./containers/itemsContainer/ItemsContainer";
 import Header from "./components/header/Header";
+import ItemsContainer from "./containers/itemsContainer/ItemsContainer";
+import ItemDetailContainer from "./containers/itemDetailContainer/ItemDetailContainer";
 import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-    <div className="container min-h-screen grid grid-cols-3 grid-flow-row auto-rows-min content-between mx-auto full-width">
+    <BrowserRouter>
       <Header />
-
-      <ItemsContainer greeting="Bienvenidos" />
-
+      <Switch>
+        <Route exact path="/">
+          <ItemsContainer greeting="Bienvenidos" />
+          <ItemDetailContainer />
+        </Route>
+      </Switch>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

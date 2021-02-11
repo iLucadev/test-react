@@ -6,12 +6,10 @@ const ItemList = ({ products }) => {
   return (
     <div
       id="ItemList"
-      className="container grid grid-cols-5 grid-rows-2 gap-4 full-width"
+      className="container grid gap-4 justify-center full-width"
     >
       {products.map((product) => {
-        if (product.id < 7) {
-          return <Card key={product.id} product={product} />;
-        }
+        return <Card key={product.id} product={product} />;
       })}
     </div>
   );
